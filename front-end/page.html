@@ -18,21 +18,92 @@
     <div class="header">
         <h1>Fire Supervision Interface</h1>
         <div class="controls">
-            <label for="fireType">Type de feu :</label>
+            <label for="fireType">Fire type</label>
             <select id="fireType">
-                <option value="all">Tous</option>
-                <option value="A">Classe A</option>
-                <option value="B">Classe B</option>
-                <option value="C">Classe C</option>
-                <option value="D">Classe D</option>
-                <option value="E">Classe E</option>
+                <option value="all">All</option>
+                <option value="A">Class A</option>
+                <option value="B">Class B</option>
+                <option value="C">Class C</option>
+                <option value="D">Class D</option>
+                <option value="E">Class E</option>
+            </select>
+            <label for="vehicleTypeFilter">Vehicle Type:</label>
+            <select id="vehicleTypeFilter">
+              <option value="all">All</option>
+              <option value="type1">Type 1</option>
+              <option value="type2">Type 2</option>
+              <option value="type3">Type 3</option>
             </select>
         </div>
+    </div>
     </div>
     
     <!--Leaflet Map-->
     <div id="map"></div>
 
+    <!--Right Sidebar for the vehicles control-->
+    <div class="sidebar" id="sidebar">
+      <h2>Vehicle Management</h2>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Create')">Create Vehicle</button>
+        <button class="tablinks" onclick="openTab(event, 'Delete')">Delete Vehicle</button>
+        <button class="tablinks" onclick="openTab(event, 'Update')">Update Vehicle</button>
+
+      <!--Tab content-->
+      <div id="Create" class="tabcontent">
+        <h3>Create a new vehicle</h3>
+        <form id="newVehicleForm">
+          <label for="newVehicleName">Vehicle Name:</label>
+          <input type="text" id="newVehicleName" name="newVehicleName" required>
+          
+          <label for="newVehicleType">Vehicle Type:</label>
+          <select id="newVehicleType" name="newVehicleType" required>
+            <option value="type1">Car</option>
+            <option value="type2">Fire Engine</option>
+            <option value="type3">Pumper Truck</option>
+          </select>
+          
+          <button type="submit">Add</button>
+        </form>
+      </div>
+
+      <div id="Delete" class="tabcontent">
+        <h3>Delete a vehicle</h3>
+        <select id="deleteVehicleChoice">
+          <option value="none">Choose a vehicle</option>
+          <option value="vehicle1">Vehicle 1</option>
+          <option value="vehicle2">Vehicle 2</option>
+          <option value="vehicle3">Vehicle 3</option>
+        </select>
+        <button id="deleteVehicleButton">Delete</button>
+      </div>
+
+      <div id="Update" class="tabcontent">
+        <h3>Update a vehicle</h3>
+        <select id="updateVehicleChoice">
+          <option value="none">Choose a vehicle</option>
+          <option value="vehicle1">Vehicle 1</option>
+          <option value="vehicle2">Vehicle 2</option>
+          <option value="vehicle3">Vehicle 3</option>
+        </select>
+        <form id="updateVehicleForm" style="display: none;">
+          <label for="updateVehicleName">New Vehicle Name:</label>
+          <input type="text" id="updateVehicleName" name="updateVehicleName" required>
+          
+          <label for="updateVehicleType">Vehicle Type:</label>
+          <select id="updateVehicleType" name="updateVehicleType" required>
+            <option value="type1">Car</option>
+            <option value="type2">Fire Engine</option>
+            <option value="type3">Pumper truck</option>
+          </select>
+
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+    </div>
+
+    
 
     <!--Scripts-->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

@@ -5,7 +5,7 @@
 ## ENTRAIN DE FAIRE : 
 - Youness :
 - Hugues :
-- Morgane :
+- Morgane : sidebar html 
 - Rami :
   
 ## PAS ENCORE FAIT : 
