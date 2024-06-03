@@ -13,11 +13,15 @@ function fetchFireData() {
     fetch('http://tp.cpe.fr:8081/fire')
         .then(response => response.json())
         .then(data => {
+            // Getting Data for each fire
             data.forEach(fire => {
+                // Creating fire Marker
                 var marker = L.marker([fire.coordinates.lat, fire.coordinates.lng]);
+                // Binding a PopUp with fire details to the fire Marker
                 marker.bindPopup(
                     `Feu de classe ${fire.type}<br>Intensité: ${fire.intensity}<br>Étendue: ${fire.extent}m²`
                 );
+                // Pushing Fire Marker to the map, paired with it's type for futur filtering
                 markers.push({ marker: marker, type: fire.type });
                 marker.addTo(map);
             });
