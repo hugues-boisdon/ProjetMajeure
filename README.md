@@ -9,4 +9,4 @@
 - Rami :
   
 ## PAS ENCORE FAIT : 
-- Interface avec Leaflet et Open
+- Interface avec Leaflet et OpenStreepMap/GoogleMaps et MapBox
