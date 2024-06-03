@@ -14,10 +14,24 @@
 
   <body>
 
+    <!--Header and Controls-->
+    <div class="header">
+        <h1>Fire Supervision Interface</h1>
+        <div class="controls">
+            <label for="fireType">Type de feu :</label>
+            <select id="fireType">
+                <option value="all">Tous</option>
+                <option value="A">Classe A</option>
+                <option value="B">Classe B</option>
+                <option value="C">Classe C</option>
+                <option value="D">Classe D</option>
+                <option value="E">Classe E</option>
+            </select>
+        </div>
+    </div>
+    
     <!--Leaflet Map-->
     <div id="map"></div>
-
-
 
 
     <!--Scripts-->

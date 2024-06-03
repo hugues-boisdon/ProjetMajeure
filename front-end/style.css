@@ -1,6 +1,43 @@
 /* --Style Sheet - Les Flambis-- */
 
+/* General Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
 
 
-/* Leaflet Map Style */
-#map { height: 97vh; }
+/*Leaflet Map Styling */ 
+
+#map {
+    height: 80vh;
+    width: 100%;
+}
+
+
+/* UI elements Styling */
+
+.controls {
+    margin: 10px;
+}
+
+
+label, select {
+    font-size: 16px;
+    margin: 5px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
